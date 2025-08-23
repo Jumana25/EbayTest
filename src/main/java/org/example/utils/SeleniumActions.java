@@ -3,12 +3,14 @@ package org.example.utils;
 import org.example.BaseWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,4 +61,20 @@ public class SeleniumActions extends BaseWebDriver {
         return matchedText;
     }
 
+    public List<WebElement> getListOfElements(By commonLocator){
+        waitForElementToBePresent(commonLocator, 15);
+        return driver.findElements(commonLocator);
+    }
+
+    public void keyPress(By element, Keys key){
+        waitForElementToBeClickable(element).sendKeys(key);
+    }
+
+    public String getElementText(By element){
+        return waitForElementToBeDisplayed(element, 5).getText();
+    }
+
+    public void scrollToBottom(){
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
 }

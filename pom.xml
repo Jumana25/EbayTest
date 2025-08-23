@@ -15,7 +15,7 @@
         <!-- Version Variables -->
         <selenium.version>4.20.0</selenium.version>
         <webdriver.manager.version>5.6.0</webdriver.manager.version>
-        <junit.version>5.10.0</junit.version>
+        <junit.version>5.11.0</junit.version>
         <cucumber.version>7.11.2</cucumber.version>
         <surefire.plugin.version>3.0.0-M5</surefire.plugin.version> <!-- Surefire Plugin version -->
         <cucumber.reporting.version>5.7.0</cucumber.reporting.version> <!-- MasterThought Reporting version -->
@@ -39,9 +39,9 @@
         <!-- JUnit Dependency -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
+            <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
+<!--            <scope>test</scope>-->
         </dependency>
 
         <!-- Cucumber Dependencies -->
@@ -61,13 +61,6 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit-platform-engine</artifactId>
             <version>${cucumber.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.9.3</version> <!-- Use the latest version -->
             <scope>test</scope>
         </dependency>
 
