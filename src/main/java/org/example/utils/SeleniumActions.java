@@ -41,6 +41,16 @@ public class SeleniumActions extends BaseWebDriver {
         waitForElementToBeClickable(element, timeoutInSeconds).click();
     }
 
+    public void clickOnElement2(By element) {
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        driver.findElement(element).click();
+    }
+
     public void writeInELement(By element, String text, int... timeoutInSeconds) {
         waitForElementToBeDisplayed(element, timeoutInSeconds).clear();
         waitForElementToBeClickable(element, timeoutInSeconds).sendKeys(text);
@@ -62,7 +72,7 @@ public class SeleniumActions extends BaseWebDriver {
     }
 
     public List<WebElement> getListOfElements(By commonLocator){
-        waitForElementToBePresent(commonLocator, 15);
+//        waitForElementToBePresent(commonLocator, 15);
         return driver.findElements(commonLocator);
     }
 

@@ -22,13 +22,17 @@ public class EbaySearchPage {
     }
 
     public void filterSearchResults(String filterName, String filterValue){
-        seleniumActions.clickOnElement(By.xpath(FILTER_CHK.replace("@FilterName", filterName).replace("@FilterValue", filterValue)), 15);
+//        seleniumActions.clickOnElement(By.xpath(FILTER_CHK.replace("@FilterName", filterName).replace("@FilterValue", filterValue)), 15);
+        seleniumActions.clickOnElement2(By.xpath(FILTER_CHK.replace("@FilterName", filterName).replace("@FilterValue", filterValue)));
     }
 
     public void validateResultsDisplayed(String searchKeyword) {
 
-//        seleniumActions.clickOnElement(By.xpath("//*[@aria-label='Close tooltip']"));
-
+        try {
+            Thread.sleep(600);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         List<WebElement> results = seleniumActions.getListOfElements(SEARCH_RESULT_ITEM);
 
         // Assert first and last items displayed contain part or all of the search string

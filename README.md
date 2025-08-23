@@ -1,4 +1,4 @@
-# OrangeHRMTest-AyaNaguib
+# EbayTest-AyaNaguib
 
 
 ## Run Steps
@@ -12,7 +12,7 @@ To run a Cucumber feature file in IntelliJ IDEA, follow these steps:
     - In the **Project** view (usually on the left side of the IDE), navigate to the `src/test/resources/features` directory where your feature files are stored.
 
 3. **Run the Feature File**:
-    - Right-click on the desired feature file (e.g., `OrangeHRMTest.feature`).
+    - Right-click on the desired feature file (e.g., `EbayTest.feature`).
     - Select **Run 'FeatureName'** from the context menu.
 
 4. **View Results**:
